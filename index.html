@@ -193,7 +193,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding:40px;"></p>
-                    <a type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+                    <a type="button" class="btn btn-warning btn-block" onclick="myModalForReserveTable()">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -364,6 +364,11 @@
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
         })
+        
+        function myModalForReserveTable() {
+            el = document.getElementById("reserveModal");
+            el.find('.modal-content').load();
+        }
     </script>
 
 </body>
